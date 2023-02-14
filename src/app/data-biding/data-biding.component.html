@@ -1,3 +1,6 @@
-<p>{{ pokemon.name }} - {{ pokemon.type }}</p>
-<p>{{ pokemon.height > 3 }}</p>
-<img [src]="imgSrc" alt="" [title]="imgTitle" />
+<button (click)="alertInfo($event)">Evento</button>
+<div
+  (mousemove)="mouseMoveEvent($event)"
+  [style.background-color]="boxColor"
+></div>
+<p>x: {{ mousePosition.x }} - y: {{ mousePosition.y }}</p>
