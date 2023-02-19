@@ -1,0 +1,18 @@
+<p *ngIf="condition; else joke">Agora você me vê</p>
+<ng-template #joke>Agora não me vê mais</ng-template>
+
+<br />
+
+<p *ngIf="conditionClick">você aguenta a verdade?</p>
+<p *ngIf="!conditionClick">NÃO!! VOCÊ NÃO AGUENTA A VERDADE!!!</p>
+
+<button (click)="onClick()">Aperte</button>
+
+<ul>
+  <li *ngFor="let item of list; let i = index" (click)="removeItem(i)">
+    {{ item.yearBirth }} - {{ item.name }}
+  </li>
+</ul>
+
+<input [(ngModel)]="name" />
+<button (click)="onClickAdd({ name, yearBirth: 12 })">Brota</button>

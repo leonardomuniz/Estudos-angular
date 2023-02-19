@@ -9,6 +9,7 @@ import { mousePosition } from '../interfaces/helpers';
 export class DataBidingComponent {
   public mousePosition: mousePosition = { x: 0, y: 0 };
   public boxColor: string = 'rgb(1,1,1)';
+  public name: string = 'Léo';
 
   constructor() {}
 
@@ -22,6 +23,6 @@ export class DataBidingComponent {
       y: value.offsetY,
     };
 
-    this.boxColor = `rgb(${this.mousePosition.x},0,${this.mousePosition.y})`;
+    this.boxColor = `rgb(${this.mousePosition.x},100,${this.mousePosition.y})`;
   }
 }
