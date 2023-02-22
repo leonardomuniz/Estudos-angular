@@ -1,5 +1,13 @@
 <!-- <app-title *ngIf="destroy"></app-title>
 <app-data-biding></app-data-biding>
-<app-structural-directives></app-structural-directives> -->
+<app-structural-directives></app-structural-directives> 
 <app-directives-atributes></app-directives-atributes>
+<app-input [count]="addValue"></app-input>
+<button (click)="add()">adicionar</button>
+<button (click)="subtract()">subtrair</button>
+-->
+<app-output (sendDates)="setDatas($event)"></app-output>
+<ng-template *ngI="getDatas">
+  <h1>{{ getDatas.name }}</h1>
+</ng-template>
 <router-outlet></router-outlet>

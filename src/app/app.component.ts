@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { itemList } from './interfaces/helpers';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   public destroy: boolean = true;
+  public addValue: number = 10;
+  public getDatas: any;
 
   constructor() {}
 
@@ -15,5 +18,16 @@ export class AppComponent implements OnInit {
 
   public destroyComponent(): void {
     this.destroy = false;
+  }
+  public add(): void {
+    this.addValue += 1;
+  }
+
+  public subtract(): void {
+    this.addValue -= 1;
+  }
+
+  public setDatas(input: itemList | Event): void {
+    this.getDatas = input;
   }
 }

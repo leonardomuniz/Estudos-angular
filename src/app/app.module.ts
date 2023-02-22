@@ -9,6 +9,7 @@ import { TitleComponent } from './title/title.component';
 import { DataBidingComponent } from './data-biding/data-biding.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { DirectivesAtributesComponent } from './directives-atributes/directives-atributes.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { DirectivesAtributesComponent } from './directives-atributes/directives-
     StructuralDirectivesComponent,
     DirectivesAtributesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })
